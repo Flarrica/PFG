@@ -6,6 +6,9 @@ IP  192.168.8.1
 usuario HT-M7603
 contraseña usuario heltec.org
 
+Después de configurar wifi y obtener una IP no se tiene que conectar al Gateway
+IP de mi router 192.168.1.3
+
 por defecto viene con uso de MQTT y LoRaWAN
 
 se puede configurar para conectar a wifi local desde la IP arriba en pestaña status
@@ -15,8 +18,6 @@ MQTT pruebas
 "mqtt://broker.hivemq.com"
 puerto 1883
 
-C:\Program Files\mosquitto>mosquitto_pub -h localhost -t prueba/proyecto/sensor/mejorPFC/prueba -m "hola"
-C:\Program Files\mosquitto>mosquitto_sub -h localhost -t prueba/proyecto/sensor/mejorPFC/#
 
 Gateway
 
@@ -144,3 +145,19 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
 	Serial.printf("\r\n");
 	delay(10);
 }
+
+
+ServidorLoraWAN
+https://id.thethingsnetwork.org/oidc/interaction/4nXW6ZKaWRzjvut88r_sZ
+usuario: flarrica
+contraseña: @Flg48662296.
+
+configuraciones 
+región 		US915
+Gateway Mode	lorawan
+Server Address	nam1.cloud.thethings.network
+Port Up		1700
+Port Down	1700
+Gateway ID	40D63CFFFE82121D
+Gateway EUI 	40D63CFFFE82121D
+
